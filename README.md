@@ -6,13 +6,14 @@ Built for CSI2110 (Data Structures and Algorithms) at the University of Ottawa, 
 
 ---
 
-## 🧩 The Problem
+## The Problem
 
 The project has two parts:
 
 **Part A: Expensive Subway** (UVa Online Judge problem)
 Given a set of stations and the cost of each connection, find the minimum total cost to connect every station, or report `Impossible` if the network can't be fully connected.
-✅ Accepted by the UVa Online Judge within time limits.
+
+Accepted by the UVa Online Judge within time limits.
 
 **Part B: Paris Metro**
 Apply the same idea to the real Paris Metro network:
@@ -20,7 +21,7 @@ Apply the same idea to the real Paris Metro network:
 2. **Build a simplified graph.** Walk along each metro line from every hub, through non-hub stations, until reaching another hub. Keep only the cheapest segment between each pair of hubs.
 3. **Compute the MST.** Run Kruskal's algorithm on the hub graph to choose the cheapest segments that connect all 58 hubs.
 
-## 📊 Result
+## Result
 
 ```
 Paris Metro Graph has 376 vertices and 933 edges.
@@ -35,7 +36,7 @@ Segments to Buy:
 57( Michel Ange Auteuil - Trocadéro ) - $204
 ```
 
-## ⚙️ How It Works
+## How It Works
 
 | Step | Technique |
 |---|---|
@@ -44,7 +45,7 @@ Segments to Buy:
 | Connect all hubs at minimum cost | Kruskal's algorithm: sort edges by cost, union only across different clusters |
 | Detect a disconnected network | MST is valid only if it uses exactly `hubs − 1` edges, otherwise `Impossible` |
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -62,7 +63,7 @@ input/
 └── test1-6.txt        # Part A test cases
 ```
 
-## ▶️ Running It
+## Running It
 
 Requires Java 8+.
 
@@ -77,10 +78,10 @@ java -cp out Main < input/test1.txt
 java -cp out ParisMetro < input/metro.txt
 ```
 
-## 🛠️ Tech
+## Tech
 
 **Java** • Graph algorithms • Kruskal's MST • Union-find • HashMaps & adjacency lists
 
-## 🙏 Credits
+## Credits
 
 Starter code and the Partition ADT (`Partition`, `Cluster`, `Node`) were provided by the CSI2110 teaching team at the University of Ottawa. All other classes and the algorithm implementations are my own.
